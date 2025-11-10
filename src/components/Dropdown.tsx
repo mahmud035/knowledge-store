@@ -32,11 +32,11 @@ const Dropdown = ({
           className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
         >
           <li onClick={() => handleGenreFilter('All')}>
-            <a>All</a>
+            <button type="button">All</button>
           </li>
           {uniqueGenres.map((genre, index) => (
             <li key={index} onClick={() => handleGenreFilter(genre)}>
-              <a>{genre}</a>
+              <button type="button">{genre}</button>
             </li>
           ))}
         </ul>
@@ -50,14 +50,14 @@ const Dropdown = ({
           className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52 min-h-fit"
         >
           <li onClick={() => handleGenreFilter('All')}>
-            <a>All</a>
+            <button type="button">All</button>
           </li>
           {uniquePublishYear.map((publishYear, index) => (
             <li
               key={index}
               onClick={() => handlePublishYearFilter(publishYear)}
             >
-              <a>{publishYear}</a>
+              <button type="button">{publishYear}</button>
             </li>
           ))}
         </ul>
